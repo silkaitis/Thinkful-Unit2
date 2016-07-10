@@ -27,6 +27,7 @@ df=pd.DataFrame(data[1::],columns=data[0])
 df['Alcohol']=df['Alcohol'].astype(float)
 df['Tobacco']=df['Tobacco'].astype(float)
 
+#Print individual descriptive statistics
 for col in df.columns:
     col=str(col)
     if col != 'Region':
@@ -37,6 +38,7 @@ for col in df.columns:
         print('The variance of the %s dataset is %.2f' % (col,df[col].var()))
         print('The standard deviation of the %s dataset is %.2f\n' % (col,df[col].std()))
 
+#Print combined Alcohol and Tobacco descriptive statistics
 col = 'Alcohol and Tobacco'
 fulldata = pd.concat([df['Alcohol'],df['Tobacco']])
 print('The mean of the %s dataset is %.2f' % (col,fulldata.mean()))
