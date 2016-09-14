@@ -25,6 +25,13 @@ Description of the Thinkful exercises completed:
     * Build model using OLS from statsmodels.api
     * Print model p-value and R^2
 4. multivariate.py / multivariate.ipynb
+  * Purpose
+    * Build multivariate model of loan data; IntRate = f(Yearly_Income, Home_Ownership)
+  * Flow
+    * Load data into DataFrame and clean
+    * Create univariate model using statsmodels.formula.api and inspect performance
+    * Create multivariate models using statsmodels.formula.api  with increasing complexity and evaluate performance
+    * Scatter plot Yearly_Income and Interest.Rate to check conclusions drawn from model performance
 5. prob_lending_club.py
 6. prob.py
 7. Time_Series.py / TimeSeries.ipynb
