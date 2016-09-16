@@ -33,6 +33,19 @@ Description of the Thinkful exercises completed:
     * Create multivariate models using statsmodels.formula.api  with increasing complexity and evaluate performance
     * Scatter plot Yearly_Income and Interest.Rate to check conclusions drawn from model performance
 5. prob_lending_club.py
+  * Purpose
+    * Explore loan data using graphical methods for any additional meaning / understanding
+  * Flow
+    * Load data into DataFrame and clean
+    * Create histogram using Pandas built-in function
+    * Create boxplot using Pandas built-in function
+    * Create probability plot using scipy probability plot
 6. prob.py
+  * Similar flow as prob_lending_club.py but with simple dataset
 7. Time_Series.py / TimeSeries.ipynb
+  * Purpose
+    * Evaluate loans per month for trends or patterns and understand the effect of stabilizing the dataset
+  * Flow
+    * Load data into DataFrame, clean and transform
+    * 
 8. Unit2Proj1.py
