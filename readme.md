@@ -47,5 +47,12 @@ Description of the Thinkful exercises completed:
     * Evaluate loans per month for trends or patterns and understand the effect of stabilizing the dataset
   * Flow
     * Load data into DataFrame, clean and transform
-    * 
+    * Execute ACF and PACF on the original dataset using statsmodels.api.graphics.tsa.plot_acf & .plot_pacf
+    * Calculate the delta between data points to stabilize the data
+    * Execute ACF and PACF on the original dataset using statsmodels.api.graphics.tsa.plot_acf & .plot_pacf
 8. Unit2Proj1.py
+  * Purpose
+    * Explore descriptive statistics on a simple dataset of alcohol and tobacco in various regions
+  * Flow
+    * Clean data and load into DataFrame
+    * Print descriptive statistics using Pandas and Scipy functionality
