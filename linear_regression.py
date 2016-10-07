@@ -25,6 +25,8 @@ plt.ylabel('Frequency')
 #%%
 #Plot matrix of scatter plots
 pd.scatter_matrix(loansData, alpha=0.05, figsize=(10,10))
+plt.savefig('loan_scatter_matrix', dpi = 100)
+plt.show()
 #%%
 #Load data into variables
 intrate=loansData['Interest.Rate']
@@ -39,7 +41,7 @@ x=np.column_stack([x1,x2])
 X=sm.add_constant(x)
 model=sm.OLS(y,X)
 f=model.fit()
-f.summary()
+print(f.summary())
 
 #%%
 print('Model P-Values: '+', '.join([str(round(p)) for p in f.pvalues]))

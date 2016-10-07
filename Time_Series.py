@@ -7,7 +7,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
 import statsmodels.api as sm
-get_ipython().magic(u'matplotlib inline')
+import seaborn as sns
+# get_ipython().magic(u'matplotlib inline')
 
 
 # In[43]:
@@ -55,8 +56,13 @@ plt.ylabel('Number of Loans')
 # In[151]:
 
 #PACF & ACF of original loan count data
-sm.graphics.tsa.plot_acf(loan_count_summary.values)
-sm.graphics.tsa.plot_pacf(loan_count_summary.values)
+fig = plt.figure(figsize=(12,8))
+ax1 = fig.add_subplot(211)
+fig = sm.graphics.tsa.plot_acf(loan_count_summary.values, ax=ax1)
+ax2 = fig.add_subplot(212)
+fig = sm.graphics.tsa.plot_pacf(loan_count_summary.values, ax=ax2)
+plt.suptitle('Original Loan Data')
+plt.savefig('ACF_PACF_Loan_Data', dpi = 100)
 
 #Autocorrelated structures are present.  Autocorrelation
 #suggests a seasonality component to the time-series data
@@ -71,11 +77,15 @@ print('Structures Observed')
 # In[152]:
 
 #PACF & ACF of original loan count data
-sm.graphics.tsa.plot_acf(diffLoanCS)
-sm.graphics.tsa.plot_pacf(diffLoanCS)
+fig = plt.figure(figsize=(12,8))
+ax1 = fig.add_subplot(211)
+fig = sm.graphics.tsa.plot_acf(diffLoanCS, ax=ax1)
+ax2 = fig.add_subplot(212)
+fig = sm.graphics.tsa.plot_pacf(diffLoanCS, ax=ax2)
+plt.suptitle('Differenced Loan Data')
+plt.savefig('ACF_PACF_Diff_Loan_Data', dpi = 100)
 
 #Autocorrelated structures are not present.  Stabilizing
 #the data eliminated the patterns previously observed.
 
 print('Structures Not Observed')
-

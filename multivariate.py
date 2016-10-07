@@ -7,7 +7,8 @@ import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
-get_ipython().magic(u'matplotlib inline')
+import seaborn as sns
+# get_ipython().magic(u'matplotlib inline')
 
 
 # In[5]:
@@ -85,5 +86,5 @@ plt.title('Interest Rate vs Yearly Income')
 plt.xlabel('Yearly Income')
 plt.ylabel('Interest Rate')
 plt.legend(['Mortgage','Own','Rent'])
+plt.savefig('YearlyIncome_vs_InterestRate', dpi = 100)
 plt.show()
-

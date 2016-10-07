@@ -2,12 +2,13 @@
 # coding: utf-8
 
 # In[1]:
+import math
 
 import pandas as pd
 import statsmodels.api as sm
-import math
 import matplotlib.pyplot as plt
-get_ipython().magic('matplotlib inline')
+import seaborn as sns
+# get_ipython().magic('matplotlib inline')
 
 
 # In[2]:
@@ -52,11 +53,12 @@ p2 = [logistic_function(x,10000,-1*coeff) for x in range(550,950)]
 plt.plot(range(550,950),p1)
 plt.plot(range(550,950),p2)
 plt.legend(['1/(1+exp(mx+b))','1/(1+exp(-mx-b))'])
-plt.show()
+plt.savefig('Logistic_function', dpi = 100)
 
 
 # In[33]:
 
+plt.figure()
 plt.scatter(loansData['FICO.Score'],loansData['Interest.Rate'])
 
 IRate=loansData[loansData['Amount.Funded.By.Investors']==10000]['Interest.Rate']
@@ -64,6 +66,7 @@ FScore=loansData[loansData['Amount.Funded.By.Investors']==10000]['FICO.Score']
 FScore=sm.add_constant(FScore)
 model=sm.OLS(IRate,FScore)
 results=model.fit()
+print results.summary()
 mFScore=range(min(FScore['FICO.Score']),max(FScore['FICO.Score']))
 mIRate=[float(results.params[0])+float(results.params[1])*x for x in mFScore]
 
@@ -73,18 +76,17 @@ plt.title('Interest Rate vs. FICO.Score')
 plt.legend(['Amount.Funded=10K','12% Interest Rate'])
 plt.xlabel('FICO.Score')
 plt.ylabel('Interest Rate')
-
+plt.savefig('Loan_Logistic_Regression', dpi = 100)
 
 # In[35]:
 
 print((12.0-float(results.params[0]))/float(results.params[1]))
 
 #The above graph shows the relationship between Interest Rate and FICO score if
-#the loan amount is fixed at $10,000.  The relationship was created using a 
+#the loan amount is fixed at $10,000.  The relationship was created using a
 #linear regression.  Based on this regression, the FICO Score at 12% interest
 #is approximately 705.  Therefore, it makes sense that a perso with a FICO Score
 #of 720 would obtain a loan for $10,000.  The probability is only 72.8%
-#which is barely above the limit set for the hypothesis test.  The hypothesis 
+#which is barely above the limit set for the hypothesis test.  The hypothesis
 #is accepted but it may not be a guarantee.  There may be other variables
 #that impact the decision being modeled such as demographics.
-

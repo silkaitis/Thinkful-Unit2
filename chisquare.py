@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 plt.close('all')
 #%%
@@ -23,6 +24,7 @@ plt.bar(freq.keys(),freq.values(),width=1)
 plt.title('Open.CREDIT.Lines')
 plt.xlabel('Number of Credit Lines')
 plt.ylabel('Frequnecy')
+plt.savefig('Chi_square', dpi = 100)
 plt.show()
 #%%
 chi, p = stats.chisquare(freq.values())
