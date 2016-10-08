@@ -17,7 +17,7 @@ Explore and learn various tools available in Pandas, Statsmodels and Scipy
   ```
     Chi = 2408.43, p = 0.00
   ```
-    ![Chi-square](https://raw.githubusercontent.com/silkaitis/Thinkful-Unit2/master/Chi_square.png)
+    ![Chi-square](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Chi_square.png?raw=true)
 2. linear_regression.py
   * Purpose
     * Build linear regression model of loan data; IntRate = f(FICO.Score, Amount.Requested)
@@ -51,7 +51,7 @@ Explore and learn various tools available in Pandas, Statsmodels and Scipy
     Kurtosis:                       3.414   Cond. No.                     2.96e+05
     ==============================================================================
   ```
-    ![scatter_matrix](https://raw.githubusercontent.com/silkaitis/Thinkful-Unit2/master/loan_scatter_matrix.png)
+    ![scatter_matrix](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/loan_scatter_matrix.png?raw=true)
 3. logistic_regression.py / logistic_regression.ipynb
   * Purpose
     * Build logistic regression model of loan data; IntRate = f(FICO.Score, Amount.Requested)
@@ -86,8 +86,8 @@ Explore and learn various tools available in Pandas, Statsmodels and Scipy
     Kurtosis:                       5.401   Cond. No.                     1.75e+04
     ==============================================================================
   ```
-    ![log_func](https://raw.githubusercontent.com/silkaitis/Thinkful-Unit2/master/Logistic_function.png)
-    ![loan_log_regress](https://raw.githubusercontent.com/silkaitis/Thinkful-Unit2/master/Loan_Log_Regression.png)
+    ![log_func](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Logistic_function.png?raw=true)
+    ![loan_log_regress](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Loan_Log_Regression.png?raw=true)
     * Model predicts an individual with a minimum FICO score of 705 would receive a loan for $10,000 with a 12% interest rate.
 4. multivariate.py / multivariate.ipynb
   * Purpose
@@ -173,7 +173,7 @@ Explore and learn various tools available in Pandas, Statsmodels and Scipy
     Kurtosis:                       2.548   Cond. No.                     3.97e+05
     ==============================================================================
   ```
-    ![img](https://github.com/silkaitis/Thinkful-Unit2/blob/master/YearlyIncome_vs_InterestRate.png?raw=true)
+    ![img](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/YearlyIncome_vs_InterestRate.png?raw=true)
 5. prob_lending_club.py
   * Purpose
     * Explore loan data using graphical methods for any additional meaning / understanding
@@ -183,21 +183,21 @@ Explore and learn various tools available in Pandas, Statsmodels and Scipy
     * Create probability plot using SciPy
   * Output
 
-    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/Amount.Funded.By.Investors.png?raw=true)
-    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/Amount.Requested.png?raw=true)
-    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/Hist-Amount.Funded.By.Investors.png?raw=true)
-    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/Hist-Amount.Requested.png?raw=true)
-    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/QQ-Amount.Funded.By.Investors.png?raw=true)
-    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/QQ-Amount.Requested.png?raw=true)
+    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Amount.Funded.By.Investors.png?raw=true)
+    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Amount.Requested.png?raw=true)
+    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Hist-Amount.Funded.By.Investors.png?raw=true)
+    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/Hist-Amount.Requested.png?raw=true)
+    ![G1](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/QQ-Amount.Funded.By.Investors.png?raw=true)
+    ![G2](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/QQ-Amount.Requested.png?raw=true)
 6. Time_Series.py / TimeSeries.ipynb
   * Purpose
     * Evaluate loans per month for trends or patterns and understand the effect of stabilizing the dataset
   * Learning Objectives
     * Create ACF and PACF plots using statsmodels
   * Output
-  
-    ![LoanData](https://github.com/silkaitis/Thinkful-Unit2/blob/master/ACF_PACF_Loan_Data.png?raw=true)
-    ![DiffLoanData](https://github.com/silkaitis/Thinkful-Unit2/blob/master/ACF_PACF_Diff_Loan_Data.png?raw=true)
+
+    ![LoanData](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/ACF_PACF_Loan_Data.png?raw=true)
+    ![DiffLoanData](https://github.com/silkaitis/Thinkful-Unit2/blob/master/images/ACF_PACF_Diff_Loan_Data.png?raw=true)
 7. Unit2Proj1.py
   * Purpose
     * Explore descriptive statistics on a simple dataset of alcohol and tobacco in various regions
